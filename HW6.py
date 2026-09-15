@@ -12,10 +12,10 @@ print(list_1)
 list_2 = []
 #4. Remove the median number from the first list and add it to the second list.
 list_1.pop(4)
-list_2.insert(0, 5)
+list_2.append(5)
 #5. Remove the first number from the first list and add it to the second list.
 list_1.pop(0)
-list_2.insert(1,9)
+list_2.append(9)
 #6. Print both lists.
 print(list_1)
 print(list_2)
@@ -24,7 +24,7 @@ sum_1 = sum(list_2)
 print(sum_1)
 #8. Move the number back to the first list (like you did in #4 and #5 but reversed).
 list_2.pop(0)
-list_1.append(14)
+list_1.insert(0, 14)
 #9. Sort the first list from lowest to highest and print it.
 list_1.sort()
 print(list_1)
