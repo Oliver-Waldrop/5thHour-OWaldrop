@@ -17,8 +17,7 @@
 height = int(input("Enter your height (in total inches: "))
 weight = int(input("Enter your weight (in pounds): "))
 
-num1 = weight / (height ** 2)
-bmi = num1 * 703
+bmi = (weight / (height ** 2)) *703
 print (bmi)
 if bmi >= 25:
     if bmi <= 29.9:
