@@ -6,8 +6,7 @@
 #1. import the "random" library
 import random
 import math
-from operator import truediv
-
+import time
 #2. print "Hello World!"
 print ("Hello World!")
 #3. Create three variables named a, b, and c, and allow the user to input an integer for each.
@@ -56,32 +55,75 @@ choice1 = int(input("You are trapped in a room. There are 2 doors. To escape, wh
 if choice1 == 1:
     print("oof... bad choice. You walk in an see the 67 kid. He kills you.")
     print("Game Over pal")
-else:
+    time.sleep(1)
+    exit()
+elif choice1 == 2:
     print("Nice choice!")
+    time.sleep(1)
 choice2= int(input("You then walk through the blue door and see 2 new doors. They are the same color. Which one do you choose now?: "))
 if choice2 == 1:
     print("Wow good thinking!")
+    time.sleep(1)
 else:
     print("Well good luck with that... You walk in and then see your mom. You forgot to do the dishes... She throws a sledgehammer at you.")
     print("Game Over...")
+    time.sleep(1)
+    exit()
 choice3= int(input("You walk through the red door. Now there are 3 doors. All of them are red. They are all already open. Which one do you choose?: "))
 if choice3 == 2:
     print("Oof... that was a horrid choice. You walk into it and see chucky cheese. You never liked his pizza. You die of starvation")
+    time.sleep(1)
+    exit()
 elif choice3 == 1:
-        print("Ooh I see you! You walk in and then you see your dog! He is dancing.")
+        print("Ooh I see you! You walk in and then you see your dog! He's dancing.")
+        time.sleep(1)
 else:
     print ("You got skinned alive. Oh well")
     print("Game Over...")
+    time.sleep(1)
+    exit()
 choice4= int(input("Do you join your dog in dancing? (1 for yes 2 for no): "))
 if choice4 == 1:
-    print("Just kidding you never had a dog. He turns into a giraffe and takes out a chainsaw. You get sawwed to death.")
+    print("Just kidding you never had a dog. He turns into a giraffe and takes out a chainsaw.")
     print("Game Over?")
+    time.sleep(1)
 else:
     print("You die because your dog has a gun. Oh well")
     print("Game Over")
-if choice4 == 1:
-    print("You hear rumbling...")
-    print("Then Chuck Norris comes out of nowhere and kills the giraffe!")
-    print("You survive! Good job!")
-else:
-    print("You won the game!")
+    time.sleep(1)
+    exit()
+print()
+print("You see the giraffe and start to run. He starts chasing you but you are ahead.")
+time.sleep(2)
+print("You get to a door. It has 9 numbers.")
+time.sleep(2)
+secret_code = "910"
+print("There are 3 numbers that are slightly scratched")
+time.sleep(2)
+print("The numbers are 9, 0, and 1. They could be in any order.")
+time.sleep(2)
+print()
+print("3 Lives Left")
+time.sleep(2)
+print()
+lives= 3
+print (lives)
+
+while lives > 0:
+    guess1 = input(f"What number choice do you choose?: {lives}):")
+    time.sleep(1)
+    if guess1 == secret_code:
+        print("You hear rumbling...")
+        print("Then Chuck Norris comes out of nowhere and kills the giraffe!")
+        print("You survive! Good job!")
+        time.sleep(1)
+        break
+    else:
+        print("Wrong choice...")
+        lives-=1
+        time.sleep(1)
+if lives == 0:
+    print("Welp you died. The giraffe catches up to you and kills you.")
+    print("Game... Over")
+    time.sleep(1)
+    exit()
