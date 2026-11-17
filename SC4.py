@@ -11,7 +11,10 @@
 num_of_players = int(input("How much players are there?: "))
 score = 0
 for player in range(1, num_of_players + 1):
-    rating = int(input(f"Judge {player}, rate the model"))
+    rating = int(input(f"Judge {player}, rate the model 1-5: "))
     score+=rating
+    while rating > 5 or rating < 1:
+        print("Put in a number between 1 and 5")
+        rating = int(input(f"Judge {player}, rate the model 1-5: "))
 average_score = score/num_of_players
 print(average_score)
